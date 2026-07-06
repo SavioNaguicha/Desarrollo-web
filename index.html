@@ -8,11 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
 </head>
-<body style="background-color: #ffffff;">
-
+<body style="background-color: beige;">
 <header>
     <div>
-        <img src="logo.jpeg" alt="logo" width="100" height="100">
+        <img src="logo.jpeg" alt="logo" width="50" height="50">
+        
     </div>
     <h1>Panadería Artesanal</h1>
     <nav>
@@ -23,9 +23,10 @@
         <a href="#Añadir al carrito">Añadir al carrito</a>
     </nav>
 </header>
-
+<br>
+<img src="Pan de masa madre.jpeg" alt="Panaderia artesanal" width="300" height="300">
 <main>
-<section id="Inicio">    
+<section id="inicio">    
     <h2>Inicio</h2>
     <p>"Bienvenidos a Atsuy, un lugar donde el tiempo se detiene para dar vida al verdadero pan artesanal.
         Nos apasiona la fusión de la paciencia de la fermentación natural con ingredientes elegidos con 
@@ -33,8 +34,10 @@
         No solo hacemos pan; horneamos con el corazón para ofrecerte una experiencia cálida, honesta y llena de sabor en tu mesa.
     "</p>
 </section>
-
-<section id="Quiénes Somos">
+<div>
+ <img src="Inicio.jpg" alt="Panaderia artesanal"width="200" height="200">
+</div>
+<section id="quienes-somos">
      <h2>Quiénes somos</h2>
     <p>En Atsuy, nos dedicamos a la creación de productos de alta calidad usando técnicas tradicionales.
        Con paciencia, pasión y un proceso de fermentación natural, te ofrecemos panes que tienen carácter
@@ -42,7 +45,6 @@
 </section>
 
     <a href="http://www.pagina.html">Ir a otra pagina</a><br>
-    <img src="Pan de masa madre.jpeg" alt="Panaderia artesanal" width="300" height="300"><br>
     <iframe width="400" height="325" src="https://www.youtube.com/embed/ttmETSsaxFQ?si=CaJ5v0J5-MOoEJPJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <class="foto pan">
 <section id="Producto">
@@ -70,7 +72,7 @@
         Disfruta del auténtico sabor artesanal compartiendo en familia.</p>
 </aside>
 
-<section id="Nuestra historia">
+<section id="nuestra-historia">
     <h2>Nuestra historia</h2> 
     <p>Atsuy es un emprendimiento de panadería artesanal que nació en Manta, y se especializa en el arte de la masa madre.
        Lo que comenzó como una intensa pasión por la fermentación natural y los procesos que requieren paciencia, 
@@ -81,7 +83,7 @@
 
 <hr>
 
-<section id="Contacto">
+<section id="contacto">
     <h2>Contacto</h2>
     <P>Puede ponerse en contacto a través de los siguientes números:</p>
         <p>Correo electrónico: inaguicha95@hotmail.es</p>
@@ -94,18 +96,36 @@
 </section>
 
 <section>
-    <h2>Contacto</h2>
-    <form>
-        <legend>Contantos llenando todos los campos</legend>
-        <label>Nombre</label>
-        <input type="text" placeholder="Tu nombre">
+    <form action="Enviar" method="POST">
+        
+        </fieldset>
+        <legend>Contactanos llenando este campo</legend>
 
-        <label>Telefono</label>
-        <input type="text" placeholder="Ingrese Telefono">
+        <div>
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" placeholder="Tu nombre">
+        </div>
 
+        <div>
+        <label for="email">email</label>
+        <input type="email" name="elmail" placeholder="Tu correo electrónico">
+        </div>
+
+        <div>
+            <label for="Tel">Telefono</label>
+            <input type="Teléfono" name ="Teléfono" placeholder="Ingresa su Telefono">
+        </div>
+
+        <div>
+        <label for="Mensaje"></label>
+        <textarea name="Mensaje" placeholder="Tu Mensaje"></textarea>
+        <div>
+
+        <button  class="btn" type="submit">Enviar</button> 
+        </fieldset>
      </form>
-    
 </section>
+
 </main>
 
      <hr>
@@ -116,5 +136,9 @@
     <P>Telefono: 2536958</P> 
 </footer>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<button onclick="Saludar()">Click</button>
+<script src="resources/script.js"></script>
+
 </body>
 </html>
