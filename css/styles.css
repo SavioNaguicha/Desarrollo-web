@@ -1,52 +1,165 @@
+/* ==========================================================================
+   1. Descripción: Estilo general (para todos los tamaños
+   ========================================================================== */
+body {
+ font-family: Arial, sans-serif;
+ margin: 10px;
+ background-color: lightgray;
+}
+/* Pantallas pequeñas (teléfonos) */
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+        font-size: 14px;
+    }
+}
 
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: lightgreen;
+        font-size: 16px;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    body {
+        background-color: lightyellow;
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================================
+   2. Descripción: LOGO DE PAGINA ATSUY
+   ========================================================================== */
+.logo-pagina {
+    /* Activa el modo Flexbox */
+    display: flex;
+
+    /* Alineación horizontal (eje principal) */
+    justify-content: flex-start; /* Puedes cambiar a 'center' si quieres todo centrado */
+
+    /* Alineación vertical (eje cruzado) */
+    align-items: center;
+
+    /* Espacio entre el logo y el título */
+    gap: 20px; 
+}
+
+/* Opcional: Para controlar la imagen dentro del flex */
+.logo-pagina img {
+    /* Elimina el comportamiento por defecto de 'inline' */
+    display: block; 
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px;
+    object-fit: cover;
+
+    /* Si quitaste los atributos width/height, le das tamaño aquí */
+    width: 80px; 
+    height: auto;
+}
+
+/* ==========================================================================
+   4. Descripción: Tipografia PANADERIA ARTESANAL H1
+   ========================================================================== */
+.portada {
+    /* Configuración Flexbox */
+    background-color: #ffd700;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    
+    /* Propiedades de diseño */
+    width: 100%;             /* Ocupa todo el ancho disponible */
+    height: 60vh;            /* Altura responsiva basada en la ventana */
+    overflow: hidden;        /* Evita que la imagen se desborde */
+}
+
+.portada img {
+    /* Hace la imagen responsiva */
+    width: 100%;
+    height: 100%;
+    
+    /* Mantiene la proporción sin deformarse */
+    object-fit: cover;       
+    object-position: center; /* Enfoca el centro de la imagen */
+    
+    /* Optimización visual */
+    display: block;
+}
+
+
+/* ==========================================================================
+   3. Descripción: Tipografia PANADERIA ARTESANAL H1
+   ========================================================================== */
 h1 {
+    /* Tipografía */
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+    line-height: 1.2;
+    text-align: center;
+    
+    /* Espaciado y Caja */
+    margin: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    
+    /* Colores */
     background-color: darkorange;
-    color: black;/* Titulo Panaderia Artesanal*/
-    padding: 20px;
-
+    color: #4A3728;
+    
+    /* Seguridad (Evita desbordamientos) */
+    overflow-wrap: break-word;
 }
 
- nav a { 
-    text-decoration: none; /* Quitar linea subrayada */
-    color:black;
-    margin-right: 25px;
-    padding: 20px
+@media (min-width: 768px) {
+    h1 {
+        text-align: left;
+        padding-left: 3rem;
+    }
 }
 
-
-/* Este es el selector para todos los elementos con class="boton" "menu"*/
-.boton {
-    /* Aquí colocas tus estilos, por ejemplo: */
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9800;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-.menu {
-    display: flex;          /* Activa el diseño flexible */
-    justify-content: flex-end; /* Alinea los elementos hacia la derecha */
-    gap: 10px;
-    top: 10px;             /* (Opcional) Espacio entre los botones */
+/* ==========================================================================
+   4. Descripción: logo-portada
+   ========================================================================== */
+.logo-portada {
+  display: flex;          /* Activa el modo Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  width: 100%;
 }
 
-
-/* Para el efecto al pasar el mouse, agregas :hover al mismo selector */
-.boton:hover {
-    background-color: #e68900;
+.logo-portada img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 
-.menu a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #000;              /* Color del texto */
-  text-decoration: none;     /* Quita el subrayado */
-  border-radius: 5px;        /* Bordes redondeados */
-  margin: 5px;               /* Espacio entre botones */
-  transition: background-color 0.3s;
+/* ==========================================================================
+   5 Descripción: NAVEGACIO PRINCIPAL, INICIO, PRODUCTO,QUIENES SOMOS......
+   ========================================================================== */
+/* Estilo base de los enlaces */
+.navegador-principal {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la izquierda */
+    gap: 10px;                  /* Opcional: añade espacio entre los enlaces */
+}
+.navegador-principal a {
+    
+    text-decoration: none; /* Quita el subrayado */
+    color: #333;           /* Color inicial del texto */
+    padding: 10px 15px;    /* Espaciado interno */
+    transition: all 0.3s ease; /* Hace que el cambio sea suave */
+}
+
+/* Efecto al pasar el mouse */
+.navegador-principal a:hover {
+    color: yellowgreen;        /* Cambia el color del texto */
+    background-color: red; /* Opcional: fondo suave */
+    border-radius: 5px;    /* Opcional: bordes redondeados */
 }
 
 /* Efecto al pasar el mouse */
@@ -63,17 +176,7 @@ p {
     color:black;
 }
 
-/* Selecciona cualquier imagen cuyo src contenga "Pan de masa madre.jpeg" */
-img[src="Pan de masa madre.jpeg"] {
-    display: block;
-    width: 100%;            /* Ancho total del contenedor */
-    height: 70vh;           /* Altura fija relativa a la pantalla */
-    object-fit: cover;      /* Mantiene la proporción sin deformar */
-    border-radius: 10px;
-    margin: 0 auto;         /* Centrado */
-    padding: 20px;
-    box-sizing: border-box; /* CLAVE: evita que el padding sume ancho extra */
-}
+
 
 @media (max-width: 600px) {
     nav {
@@ -86,80 +189,203 @@ img[src="Pan de masa madre.jpeg"] {
         padding: 10px;
     }
 }
- 
-
-#inicio h2{
-    text-align: center;
-    padding: 20px;
-
-}
-
-#inicio p{
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;         /* Limita el ancho para que no sea difícil de leer */
+/* ==========================================================================
+   6. Descripción: INICIO 
+   ========================================================================== */
+#inicio {
+    background-color: chartreuse;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: justify;      /* Justificado para el texto largo */
-    line-height: 1.6;         /* Mejora la legibilidad */
+    font-family: sans-serif;
 }
 
-#quienes-somos h2{
-    text-align: center;
-    padding: 20px;
+.hermano {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+.hermano img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-#quienes-somos p{
-    text-align: center;
-    padding: 20px;
+.texto-inicio {
+    flex: 2 1 400px;
     max-width: 600px;
-    margin: 0 auto;
+}
+
+.texto-inicio h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.texto-inicio p {
+    line-height: 1.8;
     text-align: justify;
-    line-height: 1.6;
-
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-#nuestra-historia h2 {
-    text-align: center;
-    padding: 20px;
+/* ==========================================================================
+   MEDIA QUERIES: Adaptación móvil (Breakpoints)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    #inicio {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .hermano img {
+        padding: 10px;
+    }
+
+    .texto-inicio {
+        text-align: center;
+        padding: 0 15px;
+    }
 }
 
-#nuestra-historia p{
-    text-align: center;
-    padding: 20px;
+/* ==========================================================================
+    7. Descripción: Quienes somos 
+   ========================================================================== */
+#quienes-somos {
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.borrador {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+.borrador img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.texto-quienes-somos {
+    flex: 2 1 400px;
     max-width: 600px;
-    margin: 0 auto;
+}
+
+.texto-quienes-somos h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.texto-quienes-somos p {
+    line-height: 1.8;
     text-align: justify;
-    line-height: 1.6;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-#contacto h2{
-    text-align: center;
+/* ==========================================================================
+   MEDIA QUERIES: Adaptación móvil (Breakpoints)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    #quienes-somos {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .borrador img {
+        padding: 10px;
+    }
+
+    .texto-quienes-somos {
+        text-align: center;
+        padding: 0 15px;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   configuracion de de Contacto, facebbok, direccion, 
+   ========================================================================== */
+/* Seleccionamos el ID #contacto para aplicar estilos generales a la sección */
+/* --- Sección Contacto: Estilos Generales --- */
+#contacto {
+    background-color: aquamarine;
     padding: 20px;
+    font-family: Arial, sans-serif;
 
 }
 
-#contacto p{
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.6;
+#contacto h2 {
+    margin-bottom: 15px;
 }
 
-
-
-
-img[src="Pan de masa madre.jpeg"] {
-    padding: 20px;
+/* --- Layout: Contenedor Flexible --- */
+#contacto .flex-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-
-
-#seccion-formulario {
-    color: #000;
+/* --- Columnas: Estructura Flexible --- */
+#contacto .datos-contacto, 
+#contacto .datos-redes, 
+#contacto .mapa-contenedor {
+    flex: 1;
+    min-width: 300px;
 }
+
+/* --- Elementos Internos: Mapa --- */
+#contacto .mapa-contenedor iframe {
+    width: 100%;
+    height: 300px;
+    border: none; /* Mejor práctica: quitar el borde por CSS en lugar de atributo */
+    border-radius: 8px;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    #contacto .flex-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
     
+    #contacto .datos-contacto, 
+    #contacto .datos-redes, 
+    #contacto .mapa-contenedor {
+        min-width: 100%;
+    }
+}
+
 
 
 
@@ -178,70 +404,5 @@ h1 + p { color: gray; /* Primer párrafo después de un título h1 */ }
 
 /* Estilo general (para todos los tamaños)
 */
-body {
- font-family: Arial, sans-serif;
- margin: 10px;
- background-color: lightgray;
-}
-
-/* Pantallas pequeñas (teléfonos) */
-@media (max-width: 600px) {
- body {
- background-color: lightblue;
- font-size: 14px;
- }
-} 
-
-/* Pantallas medianas (tabletas) */
-@media (min-width: 601px) and (maxwidth: 1024px) {
- body {
- background-color: lightgreen;
- font-size: 16px;
- }
-}
-
-/* Pantallas grandes (escritorios) */
-@media (min-width: 1025px) {
- body {
- background-color: lightyellow;
- font-size: 18px;
- }
-}
-
-/* Estilo base para un botón */
-button {
- background: linear-gradient(to right, #7c4caf, #8bc34a); /* Gradiente */
- border: none;
- border-radius: 12px; /* Bordes redondeados */
- box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
- color: white;
- padding: 10px 20px;
- font-size: 16px;
- cursor: pointer;
- transition: transform 0.3s, box-shadow 0.3s; /* Transiciones animadas */
-}
-
-/* Efecto al pasar el cursor (hover) */
-button:hover {
- transform: scale(1.1); /* Aumenta el tamaño */
- box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
-}
-
-
-.container {
- display: flex; /* Activa Flexbox */
- justify-content: space-around; /* Espacio uniforme entre elementos */
- align-items: center; /* Centra verticalmente los elementos */
- height: 200px;
- background-color: lightgray;
-}
-
-item {
- background-color: #4caf50;
- color: white;
- padding: 20px;
- text-align: center;
- border-radius: 5px;
-}
 
 

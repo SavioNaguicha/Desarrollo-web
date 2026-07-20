@@ -8,45 +8,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
 </head>
-<body style="background-color: beige;">
+<body style="background-color: beige;"></body>
 <header>
-    <div>
+     <div class="logo-pagina">
         <img src="logo.jpeg" alt="logo" width="50" height="50">
-        
     </div>
     <h1>Panadería Artesanal</h1>
-    <nav class="menu">
-        <a href="#Inicio">Inicio</a>
-        <a href="#Producto">Producto</a>
-        <a href="#Nuestra historia">Nuestra historia</a>
-        <a href="#Contacto">Contacto</a>
-        <a href="#Añadir al carrito">Añadir al carrito</a>
+    <nav class="navegador-principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#producto">Producto</a>
+        <a href="#nuestra historia">Nuestra historia</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#añadir al carrito">Añadir al carrito</a>
     </nav>
 </header>
+
+<div class="portada">
+    <img src="Pan de masa madre.jpeg" alt="Panaderia artesanal">
+</div>
+
 <br>
-<img src="Pan de masa madre.jpeg" alt="Panaderia artesanal" width="300" height="300">
 <main>
-<section id="inicio">    
+<section id="inicio">
+    <div class="hermano">
+        <img src="Inicio.jpeg" alt="Panaderia artesanal"width="200" height="200">
+    </div>
+    <div class="texto-inicio">
     <h2>Inicio</h2>
     <p>"Bienvenidos a Atsuy, un lugar donde el tiempo se detiene para dar vida al verdadero pan artesanal.
         Nos apasiona la fusión de la paciencia de la fermentación natural con ingredientes elegidos con 
         cuidado, creando piezas únicas que tienen una costra crujiente y un interior suave que es simplemente irresistible
-        No solo hacemos pan; horneamos con el corazón para ofrecerte una experiencia cálida, honesta y llena de sabor en tu mesa.
-    "</p>
+        No solo hacemos pan; horneamos con el corazón para ofrecerte una experiencia cálida, honesta y llena de sabor en tu mesa."</p>
+     </div>
 </section>
-<div>
- <img src="Inicio.jpg" alt="Panaderia artesanal"width="200" height="200">
-</div>
+<br>
 <section id="quienes-somos">
+    <div>
+        <img src="borrador.png" alt="Panderia artesanal" width="200" height="200">
+    </div>
+    <div class="texto-quienes-somos">
      <h2>Quiénes somos</h2><p>En Atsuy, nos dedicamos a la creación de productos de alta calidad usando técnicas tradicionales.
        Con paciencia, pasión y un proceso de fermentación natural, te ofrecemos panes que tienen carácter
        y el verdadero sabor de lo hecho a mano</p>
+    </div>
 </section>
-
-    <a href="http://www.pagina.html">Ir a otra pagina</a><br>
+<br>
+    <a href="pagina.html">Ir a otra página</a>
     <iframe width="400" height="325" src="https://www.youtube.com/embed/ttmETSsaxFQ?si=CaJ5v0J5-MOoEJPJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <class="foto pan">
-<section id="Producto">
+
+<section id="producto">
     <h2>Producto</h2>
     <p>Variedades de pan:</p>
     <ul>
@@ -84,14 +94,24 @@
 
 <section id="contacto">
     <h2>Contacto</h2>
-    <P>Puede ponerse en contacto a través de los siguientes números:</p>
+    <p>Puede ponerse en contacto a través de los siguientes números:</p>
+
+    <div class="flex-contenedor">
+    <div class="datos-contacto">
         <p>Correo electrónico: inaguicha95@hotmail.es</p>
         <p>Teléfono: 0990435794</p>
         <p>Dirección: Evenida Francisco de Izazaga. Ciudad: Manta, Pais: Ecuador.</p>
-        <p>Instagram: <a href="https://www.instagram.com/atsuy_manta?igsh=enZ2djloMGg0MW9q">Instagram</p>
-        <p>Facebook: <a href="#facebook">Facebook</p>
-        <p>Tiktok: <a href="https://www.tiktok.com/@atsuy_manta?_r=1&_t=ZS-97KV4rvKCns">Tiktok</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1555.7035380638974!2d-80.70342468889788!3d-0.9672450406329476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902be6a9e440988b%3A0x9403b825a96f98ba!2sManta!5e1!3m2!1ses!2sec!4v1781432989827!5m2!1ses!2sec" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="datos-redes">
+        <p>Instagram: <a href="https://www.instagram.com/atsuy_manta?igsh=enZ2djloMGg0MW9q">Instagram</a></p>
+        <p>Facebook: <a href="#facebook">Facebook</a></p>
+        <p>Tiktok: <a href="https://www.tiktok.com/@atsuy_manta?_r=1&_t=ZS-97KV4rvKCns">Tiktok</a></p>
+    </div>
+
+    <div class="mapa-contenedor">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1555.7035380638974!2d-80.70342468889788!3d-0.9672450406329476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902be6a9e440988b%3A0x9403b825a96f98ba!2sManta!5e1!3m2!1ses!2sec!4v1781432989827!5m2!1ses!2sec" width="100" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 </section>
 
 </main>
