@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Descripción: Estilo general (para todos los tamaños
+   1. Descripción: Estilo general (para todos los tamaños)
    ========================================================================== */
 body {
  font-family: Arial, sans-serif;
@@ -34,22 +34,14 @@ body {
    2. Descripción: LOGO DE PAGINA ATSUY
    ========================================================================== */
 .logo-pagina {
-    /* Activa el modo Flexbox */
     display: flex;
-
-    /* Alineación horizontal (eje principal) */
     justify-content: flex-start; /* Puedes cambiar a 'center' si quieres todo centrado */
-
-    /* Alineación vertical (eje cruzado) */
     align-items: center;
-
-    /* Espacio entre el logo y el título */
     gap: 20px; 
 }
 
 /* Opcional: Para controlar la imagen dentro del flex */
 .logo-pagina img {
-    /* Elimina el comportamiento por defecto de 'inline' */
     display: block; 
     border-radius: 50%;
     width: 50px; 
@@ -89,7 +81,6 @@ body {
     /* Optimización visual */
     display: block;
 }
-
 
 /* ==========================================================================
    3. Descripción: Tipografia PANADERIA ARTESANAL H1
@@ -137,14 +128,13 @@ h1 {
   width: 100%;
   height: auto;
 }
-
 /* ==========================================================================
    5 Descripción: NAVEGACIO PRINCIPAL, INICIO, PRODUCTO,QUIENES SOMOS......
    ========================================================================== */
 /* Estilo base de los enlaces */
 .navegador-principal {
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos a la izquierda */
+    justify-content: space-evenly; /* Alinea los elementos a la izquierda */
     gap: 10px;                  /* Opcional: añade espacio entre los enlaces */
 }
 .navegador-principal a {
@@ -329,65 +319,132 @@ p {
     }
 }
 
+/* ==========================================================================
+   Descripcion: ofertas de la semana
+   ========================================================================== */
 
+#ofertas-semana {
+    display: flex;
+    flex-direction: column; /* Apila el título y el párrafo */
+    align-items: flex-end;
 
+}
+
+#ofertas-semana h2{
+    text-align: right;
+    padding: 20px;
+}
+
+#ofertas-semana p{
+    text-align: left;
+    padding: 20px;
+    max-width: 600px;
+    font-family: sans-serif;
+}
+
+/* ==========================================================================
+   Descripcion: Nuestra historia
+   ========================================================================== */
+
+#nuestra-historia h2{
+    display: grid;
+    color: brown;
+    text-align: center;
+}
+#nuestra-historia p{
+   background-color: chocolate;
+    padding: 60px 20px; 
+    font-family: sans-serif;
+    color: white; /* Letra clara para que resalte sobre el fondo chocolate */
+    text-align: justify;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0dvh;
+}
 
 /* ==========================================================================
    configuracion de de Contacto, facebbok, direccion, 
    ========================================================================== */
-/* Seleccionamos el ID #contacto para aplicar estilos generales a la sección */
-/* --- Sección Contacto: Estilos Generales --- */
 #contacto {
-    background-color: aquamarine;
+    background-color: yellow; /* Fondo suave/crema */
+    font-family: sans-serif;
+    color: grey;
+    max-width: 600px;
+    margin:0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+#contacto .datos-redes a:hover {
+    color: brown;
+    background-color: aqua;
+    border-radius: 20px;
+    text-decoration: none;
 
 }
 
-#contacto h2 {
-    margin-bottom: 15px;
-}
-
-/* --- Layout: Contenedor Flexible --- */
-#contacto .flex-contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-/* --- Columnas: Estructura Flexible --- */
-#contacto .datos-contacto, 
-#contacto .datos-redes, 
 #contacto .mapa-contenedor {
-    flex: 1;
-    min-width: 300px;
+    margin-top: 20px;
+    width: 100%;
 }
 
-/* --- Elementos Internos: Mapa --- */
 #contacto .mapa-contenedor iframe {
     width: 100%;
-    height: 300px;
-    border: none; /* Mejor práctica: quitar el borde por CSS en lugar de atributo */
     border-radius: 8px;
 }
 
-/* --- Responsividad --- */
-@media (max-width: 768px) {
-    #contacto .flex-contenedor {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #contacto .datos-contacto, 
-    #contacto .datos-redes, 
-    #contacto .mapa-contenedor {
-        min-width: 100%;
-    }
+
+/* ==========================================================================
+    Descripción: FORMULARIO
+   ========================================================================== */
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 600px;
+    margin: auto;
+    align-items: end;
+    padding: 20px;
+    font-family: sans-serif;
+}
+#formulario fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: solid;
+    padding: 20px;
 }
 
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
+}
+#formulario input {
+    display: flex;
+    padding: 8px;
+    border: 1px solid yellow; /* Corregido: se necesita grosor y estilo, o usar border-color */
+    border-radius: 4px;
+}
 
+/* ==========================================================================
+   Descripción: PIEE DE PAGINA
+   ========================================================================== */
+
+.pie-principal{
+    display: flex;
+    background-color: coral;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-family: sans-serif;
+    text-align: center;
+
+}
 
 /* TECNICAS Y HERRAMEINTAS PRINCIPALES  */
 
@@ -396,13 +453,32 @@ a[href^="https"] { color: green; /* Links que comienzan con "https" */
 
 li:nth-child(2) { color: blue; /* Segundo elemento de una lista */ }
 
-button:hover { background-color: yellow; /* Botón al pasar el cursor
+button:hover { background-color: red; /* Botón al pasar el cursor
 */ }
 
 h1 + p { color: gray; /* Primer párrafo después de un título h1 */ }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
 
-/* Estilo general (para todos los tamaños)
-*/
+.container h2 {
+    width: 100%;           /* 🎯 Obliga al título a ocupar toda la línea de arriba */
+    text-align: center;    /* Lo centra bonito */
+    margin-bottom: 10px;
+}
+
+.item {
+    flex: 1 1 250px;
+    max-width: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
 
 
