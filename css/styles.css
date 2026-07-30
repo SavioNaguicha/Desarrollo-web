@@ -183,7 +183,6 @@ p {
    6. Descripción: INICIO 
    ========================================================================== */
 #inicio {
-    background-color: chartreuse;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -253,7 +252,6 @@ p {
     7. Descripción: Quienes somos 
    ========================================================================== */
 #quienes-somos {
-    background-color: pink;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
