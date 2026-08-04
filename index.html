@@ -8,27 +8,79 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
 </head>
-<body style="background-color: white;"></body>
-<header>
-     <div class="logo-pagina">
-        <img src="logo.jpeg" alt="logo" width="50" height="50">
+<body style="background-color: white;">
+
+    <header>
+        <div class="logo-pagina">
+            <img src="logo.jpeg" alt="logo" width="50" height="50">
+        </div>
+        <h1>Panadería Artesanal</h1>
+        <nav class="navegador-principal">
+            <a href="#inicio">Inicio</a>
+            <a href="producto.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="#carrito">Carrito</a>
+        </nav>
+    </header>
+
+    <div class="portada">
+        <img src="Pan de masa madre.jpeg" alt="Panaderia artesanal">
     </div>
-    <h1>Panadería Artesanal</h1>
-    <nav class="navegador-principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#producto">Producto</a>
-        <a href="#nuestra-historia">Nuestra historia</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#añadir al carrito">Añadir al carrito</a>
-    </nav>
-</header>
 
-<div class="portada">
-    <img src="Pan de masa madre.jpeg" alt="Panaderia artesanal">
-</div>
+    <br>
 
-<br>
-<main>
+    <main>
+        <div class="nuestros">
+            <h2>Productos Artesanales</h2>
+
+        <div class="items" id="servicio-1">
+            <img src="" alt="">
+            <span>1</span>
+            <h3>Masa Madre</h3>
+            <p>Pan de fermentación natural con sabor único.</p>
+            <span class="precio">$2.50</span>
+            <button>Añadir al carrito</button>
+        </div>
+        
+        <div class="items" id="servicio-2">
+            <img src="" alt="">
+            <span>2</span>
+            <h3>Avellana</h3>
+            <p>Pan especial con trozos de avellana tostada.</p>
+            <span class="precio">$4</span>
+            <button>Añadir al carrito</button>
+        </div>
+
+        <div class="items" id="servicio-3">
+            <img src="" alt="">
+            <span>3</span>
+            <h3>Focaccia</h3>
+            <p>Pan tradicional italiano con hierbas y aceite de oliva.</p>
+            <span class="precio">$3</span>
+            <button>Añadir al carrito</button>
+        </div>
+
+        <div class="items" id="servicio-4">
+            <img src="" alt="">
+            <span>4</span>
+            <h3>Ciabatta</h3>
+            <p>Textura crujiente por fuera y suave por dentro.</p>
+            <span class="precio">$6</span>
+            <button>Añadir al carrito</button>
+        </div>
+
+        <div class="items" id="servicio-5">
+            <img src="" alt="">
+            <span>5</span>
+            <h3>Cibatta con hierbas</h3>
+            <p>Con romero, tomillo y un toque especial.</p>
+            <span class="precio">$4</span>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+
 <section id="inicio">
     <div class="hermano">
         <img src="Inicio.jpeg" alt="Panaderia artesanal"width="200" height="200">
@@ -42,31 +94,8 @@
      </div>
 </section>
 <br>
-<section id="quienes-somos">
-    <div>
-        <img src="borrador.png" alt="Panderia artesanal" width="200" height="200">
-    </div>
-    <div class="texto-quienes-somos">
-     <h2>Quiénes somos</h2><p>En Atsuy, nos dedicamos a la creación de productos de alta calidad usando técnicas tradicionales.
-       Con paciencia, pasión y un proceso de fermentación natural, te ofrecemos panes que tienen carácter
-       y el verdadero sabor de lo hecho a mano</p>
-    </div>
-</section>
-<br>
     <a href="pagina.html">Ir a otra página</a>
     <iframe width="400" height="325" src="https://www.youtube.com/embed/ttmETSsaxFQ?si=CaJ5v0J5-MOoEJPJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<section id="producto">
-    <h2>Producto</h2>
-    <p>Variedades de pan:</p>
-    <ul>
-        <li>Masa madre</li>
-        <li>Avellana</li>
-        <li>Focaccia</li>
-        <li>Ciabatta</li>
-        <li>Cibatta con hierbas</li>
-    </ul>
-</section>
 
 <div class="container">
     <h2>Nuestro Servicios</h2>
@@ -93,7 +122,6 @@
 
 </div>
 
-
 <aside id="ofertas-semana">
     <h2>Ofertas de la semana</h2>
     <p>¡El combo perfecto para tu mesa!
@@ -101,69 +129,10 @@
         Disfruta del auténtico sabor artesanal compartiendo en familia.</p>
 </aside>
 
-<section id="nuestra-historia">
-    <h2>Nuestra historia</h2> 
-    <p>Atsuy es un emprendimiento de panadería artesanal que nació en Manta, y se especializa en el arte de la masa madre.
-       Lo que comenzó como una intensa pasión por la fermentación natural y los procesos que requieren paciencia, 
-       ha evolucionado en un proyecto vibrante que convierte ingredientes simples en auténticas joyas gastronómicas.
-       Combinamos técnica precisa y calidad para ofrecer un producto genuino, saludable y con el inconfundible sabor
-       del verdadero pan.</p>
-</section>
-
 <hr>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puede ponerse en contacto a través de los siguientes números:</p>
-
-    <div class="datos-contacto">
-        <p>Correo electrónico: inaguicha95@hotmail.es</p>
-        <p>Teléfono: 0990435794</p>
-        <p>Dirección: Evenida Francisco de Izazaga. Ciudad: Manta, Pais: Ecuador.</p>
-    </div>
-
-    <div class="datos-redes">
-        <p>Instagram: <a href="https://www.instagram.com/atsuy_manta?igsh=enZ2djloMGg0MW9q">Instagram</a></p>
-        <p>Facebook: <a href="#facebook">Facebook</a></p>
-        <p>Tiktok: <a href="https://www.tiktok.com/@atsuy_manta?_r=1&_t=ZS-97KV4rvKCns">Tiktok</a></p>
-    </div>
-
-    <div class="mapa-contenedor">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1555.7035380638974!2d-80.70342468889788!3d-0.9672450406329476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902be6a9e440988b%3A0x9403b825a96f98ba!2sManta!5e1!3m2!1ses!2sec!4v1781432989827!5m2!1ses!2sec" width="100" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</section>
-
 </main>
-
-     <hr>
     
-<section id="formulario">
-    <form action="URL" method="GET|POST">
-     <fieldset>
-        <legend>Contactanos llenando este campo</legend>
-
-        <div>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="Nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
-        </div>
-
-        <div>
-        <label for="nombre">Email:</label>
-        <input type="text" id="email" name="email" placeholder="ejemplo@correo.com" required>
-        </div>
-
-        <div>
-        <label for="nombre">Telefono:</label>
-        <input type="text" id="tel" name="telefono" placeholder="Tu número de teléfono" required>
-        </div>
-          
-        <div>
-        <button type="submit">Eviar</button>
-        </div>
-        
-        </fieldset>
-     </form>
-</section>
 <button onclick="Saludar()">Click</button>
 <hr>
 <footer class="pie-principal">

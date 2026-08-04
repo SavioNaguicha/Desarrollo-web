@@ -35,22 +35,20 @@ body {
    ========================================================================== */
 .logo-pagina {
     display: flex;
-    justify-content: flex-start; /* Puedes cambiar a 'center' si quieres todo centrado */
+    justify-content: center;
     align-items: center;
-    gap: 20px; 
+    padding: 10px;
+    border-radius: 50%;
+    border: 3px solid #ff69b4;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
 }
 
-/* Opcional: Para controlar la imagen dentro del flex */
 .logo-pagina img {
-    display: block; 
-    border-radius: 50%;
-    width: 50px; 
-    height: 50px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
-    /* Si quitaste los atributos width/height, le das tamaño aquí */
-    width: 80px; 
-    height: auto;
 }
 
 /* ==========================================================================
@@ -165,6 +163,7 @@ h2 {
 p {
     color:black;
 }
+
 
 
 
@@ -343,32 +342,42 @@ p {
 /* ==========================================================================
    Descripcion: Nuestra historia
    ========================================================================== */
+#nuestra-historia {
+    background-color:re;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+}
 
-#nuestra-historia h2{
-    display: grid;
-    color: brown;
-    text-align: center;
-}
-#nuestra-historia p{
-   background-color: chocolate;
-    padding: 60px 20px; 
+/* 2. Llamar al título dentro de esa sección */
+#nuestra-historia h2 {
+    color: #8B4513; /* Color marrón tipo pan */
     font-family: sans-serif;
-    color: white; /* Letra clara para que resalte sobre el fondo chocolate */
-    text-align: justify;
-    max-width: 1000px;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0dvh;
+    margin-bottom: 20px;
 }
+
+#nuestra-historia p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* 4. Llamar al enlace de volver */
+#nuestra-historia a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #d97706;
+    font-weight: bold;
+}
+
 
 /* ==========================================================================
    configuracion de de Contacto, facebbok, direccion, 
    ========================================================================== */
 #contacto {
-    background-color: yellow; /* Fondo suave/crema */
+    background-color: white; /* Fondo suave/crema */
     font-family: sans-serif;
-    color: grey;
     max-width: 600px;
     margin:0 auto;
     padding: 20px;
@@ -376,7 +385,7 @@ p {
 
 }
 #contacto .datos-redes a:hover {
-    color: brown;
+    color: blue;
     background-color: aqua;
     border-radius: 20px;
     text-decoration: none;
@@ -479,4 +488,29 @@ h1 + p { color: gray; /* Primer párrafo después de un título h1 */ }
     border-radius: 8px;
 }
 
+/* ==========================================================================
+   Descripción: PIEE DE PAGINA
+   ========================================================================== */
 
+
+.nuestros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.nuestros h2 {
+    width: 100%;           /* 🎯 Obliga al título a ocupar toda la línea de arriba */
+    text-align: center;    /* Lo centra bonito */
+    margin-bottom: 10px;
+}
+
+.items {
+    flex: 1 1 250px;
+    max-width: 350px;
+    background-color: burlywood;
+    padding: 20px;
+    border-radius: 8px;
+}
